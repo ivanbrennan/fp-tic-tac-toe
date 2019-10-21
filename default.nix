@@ -8,6 +8,6 @@ in with pkgs;
 mkShell {
   buildInputs = [
     cabal-install
-    ghc
+    haskell.compiler.ghc865
   ];
 }
