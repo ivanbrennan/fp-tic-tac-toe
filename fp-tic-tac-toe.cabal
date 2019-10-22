@@ -1,0 +1,21 @@
+cabal-version:       >=1.10
+name:                fp-tic-tac-toe
+version:             0.1.0.0
+license:             BSD3
+author:              ivanbrennan
+maintainer:          ivan.brennan@gmail.com
+category:            Game
+build-type:          Simple
+
+library
+  exposed-modules:     FpTicTacToe.Main
+  build-depends:       base >=4.12 && <4.13
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+executable fp-tic-tac-toe
+  main-is:             fp-tic-tac-toe.hs
+  build-depends:       base
+                     , fp-tic-tac-toe
+  hs-source-dirs:      app
+  default-language:    Haskell2010
