@@ -6,18 +6,18 @@ To develop without Nix, use [ghcup](https://gitlab.haskell.org/haskell/ghcup) to
 
 ## Build
 
-```sh
+```
 make build
 ```
 
 ## Run
 
-```sh
+```
 make run
 ```
 
 ## Test
 
-```sh
+```
 make test
 ```
