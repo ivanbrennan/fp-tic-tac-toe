@@ -19,3 +19,15 @@ executable fp-tic-tac-toe
                      , fp-tic-tac-toe
   hs-source-dirs:      app
   default-language:    Haskell2010
+
+test-suite fp-tic-tac-toe-test
+  type:                exitcode-stdio-1.0
+  main-is:             Spec.hs
+  other-modules:       FpTicTacToe.MainSpec
+  hs-source-dirs:      test
+  ghc-options:         -Wall -threaded
+  build-depends:       base
+                     , fp-tic-tac-toe
+                     , hspec
+  build-tool-depends:  hspec-discover:hspec-discover
+  default-language:    Haskell2010

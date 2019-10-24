@@ -15,3 +15,9 @@ make build
 ```sh
 make run
 ```
+
+## Test
+
+```sh
+make test
+```
