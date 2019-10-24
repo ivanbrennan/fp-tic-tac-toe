@@ -1,6 +1,9 @@
 PROJECT_NAME ?= fp-tic-tac-toe
 PROJECT_ROOT ?= $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
+TEST_FLAGS  = --failure-report=$$PWD/.hspec-failures
+TEST_FLAGS += --rerun-all-on-success --rerun
+
 .PHONY: build
 build:
 	cabal v2-build
@@ -8,6 +11,10 @@ build:
 .PHONY: run
 run:
 	cabal v2-run $(PROJECT_NAME)
+
+.PHONY: test
+test:
+	cabal v2-run $(PROJECT_NAME)-test -- $(TEST_FLAGS)
 
 .PHONY: clean
 clean:
