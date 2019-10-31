@@ -21,3 +21,15 @@ make run
 ```
 make test
 ```
+
+## Lint
+
+```
+make lint
+```
+
+## Watch
+
+```
+make watch
+```
