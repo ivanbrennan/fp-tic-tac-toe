@@ -9,6 +9,7 @@ mkShell {
   buildInputs = [
     cabal-install
     haskell.compiler.ghc865
+    haskellPackages.ghcid
     hlint
   ];
 }
