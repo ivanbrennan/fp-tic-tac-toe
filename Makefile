@@ -16,6 +16,14 @@ run:
 test:
 	cabal v2-run $(PROJECT_NAME)-test -- $(TEST_FLAGS)
 
+.PHONY: lint
+lint:
+	hlint $(PROJECT_ROOT)/src $(PROJECT_ROOT)/test
+
+.PHONY: watch
+watch:
+	ghcid '--command=cabal v2-repl'
+
 .PHONY: clean
 clean:
 	rm -rf $(PROJECT_ROOT)/dist
